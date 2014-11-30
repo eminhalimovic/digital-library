@@ -1,101 +1,101 @@
-2014-11-30T08:38:35.075084+00:00 app[web.1]: [2014-11-30 08:38:35 +0000] [7] [INFO] Worker exiting (pid: 7)
-2014-11-30T08:38:35.075074+00:00 app[web.1]:   File "/app/hellodjango/settings.py", line 57, in <module>
-2014-11-30T08:38:35.216648+00:00 app[web.1]: [2014-11-30 08:38:35 +0000] [2] [INFO] Shutting down: Master
-2014-11-30T08:38:35.216653+00:00 app[web.1]: [2014-11-30 08:38:35 +0000] [2] [INFO] Reason: Worker failed to boot.
-2014-11-30T08:38:35.191886+00:00 heroku[web.1]: State changed from starting to up
-2014-11-30T08:38:36.085278+00:00 heroku[web.1]: State changed from up to crashed
-2014-11-30T08:38:36.085278+00:00 heroku[web.1]: State changed from crashed to starting
-2014-11-30T08:38:36.066883+00:00 heroku[web.1]: Process exited with status 3
-2014-11-30T08:38:40.043484+00:00 heroku[web.1]: Starting process with command `gunicorn hellodjango.wsgi --log-file -`
-2014-11-30T08:38:40.714108+00:00 app[web.1]: [2014-11-30 08:38:40 +0000] [7] [INFO] Booting worker with pid: 7
-2014-11-30T08:38:40.705407+00:00 app[web.1]: [2014-11-30 08:38:40 +0000] [2] [INFO] Listening at: http://0.0.0.0:23558 (2)
-2014-11-30T08:38:40.705493+00:00 app[web.1]: [2014-11-30 08:38:40 +0000] [2] [INFO] Using worker: sync
-2014-11-30T08:38:40.860761+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
-2014-11-30T08:38:40.860766+00:00 app[web.1]:     self.wsgi = self.app.wsgi()
-2014-11-30T08:38:40.860764+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/workers/base.py", line 114, in init_process
-2014-11-30T08:38:40.860763+00:00 app[web.1]:     worker.init_process()
-2014-11-30T08:38:40.704730+00:00 app[web.1]: [2014-11-30 08:38:40 +0000] [2] [INFO] Starting gunicorn 19.1.1
-2014-11-30T08:38:40.860753+00:00 app[web.1]: [2014-11-30 08:38:40 +0000] [7] [ERROR] Exception in worker process:
-2014-11-30T08:38:40.860759+00:00 app[web.1]: Traceback (most recent call last):
-2014-11-30T08:38:40.860775+00:00 app[web.1]:     return util.import_app(self.app_uri)
-2014-11-30T08:38:40.860793+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/core/wsgi.py", line 14, in get_wsgi_application
-2014-11-30T08:38:40.860795+00:00 app[web.1]:     django.setup()
-2014-11-30T08:38:40.860796+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/__init__.py", line 20, in setup
-2014-11-30T08:38:40.860798+00:00 app[web.1]:     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
-2014-11-30T08:38:40.860799+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/conf/__init__.py", line 46, in __getattr__
-2014-11-30T08:38:40.860801+00:00 app[web.1]:     self._setup(name)
-2014-11-30T08:38:40.860802+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/conf/__init__.py", line 42, in _setup
-2014-11-30T08:38:40.860805+00:00 app[web.1]:     self._wrapped = Settings(settings_module)
-2014-11-30T08:38:40.860807+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/conf/__init__.py", line 94, in __init__
-2014-11-30T08:38:40.860808+00:00 app[web.1]:     mod = importlib.import_module(self.SETTINGS_MODULE)
-2014-11-30T08:38:40.860810+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/importlib/__init__.py", line 37, in import_module
-2014-11-30T08:38:40.860811+00:00 app[web.1]:     __import__(name)
-2014-11-30T08:38:40.860813+00:00 app[web.1]:   File "/app/hellodjango/settings.py", line 57, in <module>
-2014-11-30T08:38:40.860815+00:00 app[web.1]:     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-2014-11-30T08:38:40.860816+00:00 app[web.1]: NameError: name 'BASE_DIR' is not defined
-2014-11-30T08:38:40.860768+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/base.py", line 66, in wsgi
-2014-11-30T08:38:40.860828+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
-2014-11-30T08:38:40.860832+00:00 app[web.1]:     return util.import_app(self.app_uri)
-2014-11-30T08:38:40.860837+00:00 app[web.1]:     application = Cling(get_wsgi_application())
-2014-11-30T08:38:40.860769+00:00 app[web.1]:     self.callable = self.load()
-2014-11-30T08:38:40.860829+00:00 app[web.1]:     return self.load_wsgiapp()
-2014-11-30T08:38:40.860834+00:00 app[web.1]:     __import__(module)
-2014-11-30T08:38:40.860840+00:00 app[web.1]:     django.setup()
-2014-11-30T08:38:40.860846+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/conf/__init__.py", line 42, in _setup
-2014-11-30T08:38:40.860845+00:00 app[web.1]:     self._setup(name)
-2014-11-30T08:38:40.860850+00:00 app[web.1]:     mod = importlib.import_module(self.SETTINGS_MODULE)
-2014-11-30T08:38:40.860855+00:00 app[web.1]:   File "/app/hellodjango/settings.py", line 57, in <module>
-2014-11-30T08:38:40.860863+00:00 app[web.1]: [2014-11-30 08:38:40 +0000] [7] [INFO] Worker exiting (pid: 7)
-2014-11-30T08:38:40.860852+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/importlib/__init__.py", line 37, in import_module
-2014-11-30T08:38:40.860856+00:00 app[web.1]:     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-2014-11-30T08:38:40.860787+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/util.py", line 356, in import_app
-2014-11-30T08:38:40.860833+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/util.py", line 356, in import_app
-2014-11-30T08:38:40.860849+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/conf/__init__.py", line 94, in __init__
-2014-11-30T08:38:40.860789+00:00 app[web.1]:     __import__(module)
-2014-11-30T08:38:40.860838+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/core/wsgi.py", line 14, in get_wsgi_application
-2014-11-30T08:38:40.860790+00:00 app[web.1]:   File "/app/hellodjango/wsgi.py", line 16, in <module>
-2014-11-30T08:38:40.860841+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/__init__.py", line 20, in setup
-2014-11-30T08:38:40.860792+00:00 app[web.1]:     application = Cling(get_wsgi_application())
-2014-11-30T08:38:40.860843+00:00 app[web.1]:     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
-2014-11-30T08:38:40.860818+00:00 app[web.1]: Traceback (most recent call last):
-2014-11-30T08:38:40.860819+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
-2014-11-30T08:38:40.860821+00:00 app[web.1]:     worker.init_process()
-2014-11-30T08:38:40.860822+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/workers/base.py", line 114, in init_process
-2014-11-30T08:38:40.860823+00:00 app[web.1]:     self.wsgi = self.app.wsgi()
-2014-11-30T08:38:40.860825+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/base.py", line 66, in wsgi
-2014-11-30T08:38:40.860826+00:00 app[web.1]:     self.callable = self.load()
-2014-11-30T08:38:40.860830+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
-2014-11-30T08:38:40.860836+00:00 app[web.1]:   File "/app/hellodjango/wsgi.py", line 16, in <module>
-2014-11-30T08:38:40.860844+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/conf/__init__.py", line 46, in __getattr__
-2014-11-30T08:38:40.860848+00:00 app[web.1]:     self._wrapped = Settings(settings_module)
-2014-11-30T08:38:40.860853+00:00 app[web.1]:     __import__(name)
-2014-11-30T08:38:40.860858+00:00 app[web.1]: NameError: name 'BASE_DIR' is not defined
-2014-11-30T08:38:40.860773+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
-2014-11-30T08:38:40.860771+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
-2014-11-30T08:38:40.860772+00:00 app[web.1]:     return self.load_wsgiapp()
-2014-11-30T08:38:40.988749+00:00 app[web.1]: [2014-11-30 08:38:40 +0000] [2] [INFO] Reason: Worker failed to boot.
-2014-11-30T08:38:40.988741+00:00 app[web.1]: [2014-11-30 08:38:40 +0000] [2] [INFO] Shutting down: Master
-2014-11-30T08:38:41.652025+00:00 heroku[web.1]: State changed from starting to crashed
-2014-11-30T08:38:41.644422+00:00 heroku[web.1]: Process exited with status 3
-2014-11-30T08:41:02.486587+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=pacific-inlet-2042.herokuapp.com request_id=d7a2d6fb-d846-4172-859f-6a8e9a731027 fwd="89.201.236.237" dyno= connect= service= status=503 bytes=
-2014-11-30T08:41:03.449516+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=pacific-inlet-2042.herokuapp.com request_id=03e9cb5e-345c-4238-b0ae-a917f2bf182e fwd="89.201.236.237" dyno= connect= service= status=503 bytes=
-2014-11-30T08:41:03.623267+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=pacific-inlet-2042.herokuapp.com request_id=8a27a87e-2eb4-492e-ab86-82d44ba05beb fwd="89.201.236.237" dyno= connect= service= status=503 bytes=
-2014-11-30T08:41:45.905362+00:00 heroku[api]: Scale to web=1 by ehalimov@globalnet.hr
-2014-11-30T08:43:49.691216+00:00 heroku[api]: Starting process with command `ls` by ehalimov@globalnet.hr
-2014-11-30T08:43:55.098221+00:00 heroku[run.1611]: Awaiting client
-2014-11-30T08:43:55.129706+00:00 heroku[run.1611]: Starting process with command `ls`
-2014-11-30T08:43:55.447414+00:00 heroku[run.1611]: State changed from starting to up
-2014-11-30T08:43:56.633809+00:00 heroku[run.1611]: State changed from up to complete
-2014-11-30T08:43:56.618709+00:00 heroku[run.1611]: Process exited with status 0
-2014-11-30T08:44:04.534969+00:00 heroku[api]: Starting process with command `pwd` by ehalimov@globalnet.hr
-2014-11-30T08:44:10.777238+00:00 heroku[run.2600]: Awaiting client
-2014-11-30T08:44:10.814352+00:00 heroku[run.2600]: Starting process with command `pwd`
-2014-11-30T08:44:11.139076+00:00 heroku[run.2600]: State changed from starting to up
-2014-11-30T08:44:12.137982+00:00 heroku[run.2600]: Process exited with status 0
-2014-11-30T08:44:12.155834+00:00 heroku[run.2600]: State changed from up to complete
-2014-11-30T08:44:25.240774+00:00 heroku[api]: Starting process with command `cat runtime.txt` by ehalimov@globalnet.hr
-2014-11-30T08:44:29.976490+00:00 heroku[run.4402]: Awaiting client
-2014-11-30T08:44:30.010960+00:00 heroku[run.4402]: Starting process with command `cat runtime.txt`
-2014-11-30T08:44:30.357673+00:00 heroku[run.4402]: State changed from starting to up
-2014-11-30T08:44:31.289870+00:00 heroku[run.4402]: State changed from up to complete
-2014-11-30T08:44:31.270442+00:00 heroku[run.4402]: Process exited with status 0
+2014-11-30T08:52:27.463144+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/conf/__init__.py", line 46, in __getattr__
+2014-11-30T08:52:27.463146+00:00 app[web.1]:     self._setup(name)
+2014-11-30T08:52:27.463147+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/conf/__init__.py", line 42, in _setup
+2014-11-30T08:52:27.463148+00:00 app[web.1]:     self._wrapped = Settings(settings_module)
+2014-11-30T08:52:27.463150+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/conf/__init__.py", line 94, in __init__
+2014-11-30T08:52:27.463152+00:00 app[web.1]:     mod = importlib.import_module(self.SETTINGS_MODULE)
+2014-11-30T08:52:27.463153+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/importlib/__init__.py", line 37, in import_module
+2014-11-30T08:52:27.463155+00:00 app[web.1]:     __import__(name)
+2014-11-30T08:52:27.463095+00:00 app[web.1]:     mod = importlib.import_module(self.SETTINGS_MODULE)
+2014-11-30T08:52:27.463157+00:00 app[web.1]:     DATABASES['default'] =  dj_database_url.config()
+2014-11-30T08:52:27.463122+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/workers/base.py", line 114, in init_process
+2014-11-30T08:52:27.463123+00:00 app[web.1]:     self.wsgi = self.app.wsgi()
+2014-11-30T08:52:27.463227+00:00 app[web.1]: [2014-11-30 08:52:27 +0000] [7] [INFO] Worker exiting (pid: 7)
+2014-11-30T08:52:27.463159+00:00 app[web.1]: NameError: name 'DATABASES' is not defined
+2014-11-30T08:52:27.463099+00:00 app[web.1]:   File "/app/hellodjango/settings.py", line 65, in <module>
+2014-11-30T08:52:27.463100+00:00 app[web.1]:     DATABASES['default'] =  dj_database_url.config()
+2014-11-30T08:52:27.463102+00:00 app[web.1]: NameError: name 'DATABASES' is not defined
+2014-11-30T08:52:27.463103+00:00 app[web.1]: Traceback (most recent call last):
+2014-11-30T08:52:27.599738+00:00 app[web.1]: [2014-11-30 08:52:27 +0000] [2] [INFO] Reason: Worker failed to boot.
+2014-11-30T08:52:27.463104+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+2014-11-30T08:52:27.463106+00:00 app[web.1]:     worker.init_process()
+2014-11-30T08:52:27.599598+00:00 app[web.1]: [2014-11-30 08:52:27 +0000] [2] [INFO] Shutting down: Master
+2014-11-30T08:52:27.463140+00:00 app[web.1]:     django.setup()
+2014-11-30T08:52:27.463156+00:00 app[web.1]:   File "/app/hellodjango/settings.py", line 65, in <module>
+2014-11-30T08:52:27.505014+00:00 heroku[web.1]: State changed from starting to up
+2014-11-30T08:52:28.380876+00:00 heroku[web.1]: Process exited with status 3
+2014-11-30T08:52:28.392140+00:00 heroku[web.1]: State changed from up to crashed
+2014-11-30T08:52:28.392576+00:00 heroku[web.1]: State changed from crashed to starting
+2014-11-30T08:52:33.095869+00:00 heroku[web.1]: Starting process with command `gunicorn hellodjango.wsgi --log-file -`
+2014-11-30T08:52:34.923454+00:00 app[web.1]: [2014-11-30 08:52:34 +0000] [2] [INFO] Starting gunicorn 19.1.1
+2014-11-30T08:52:34.925309+00:00 app[web.1]: [2014-11-30 08:52:34 +0000] [2] [INFO] Using worker: sync
+2014-11-30T08:52:34.924693+00:00 app[web.1]: [2014-11-30 08:52:34 +0000] [2] [INFO] Listening at: http://0.0.0.0:50437 (2)
+2014-11-30T08:52:34.938991+00:00 app[web.1]: [2014-11-30 08:52:34 +0000] [7] [INFO] Booting worker with pid: 7
+2014-11-30T08:52:35.518223+00:00 heroku[web.1]: State changed from starting to up
+2014-11-30T08:52:35.768218+00:00 app[web.1]: [2014-11-30 08:52:35 +0000] [7] [ERROR] Exception in worker process:
+2014-11-30T08:52:35.768225+00:00 app[web.1]: Traceback (most recent call last):
+2014-11-30T08:52:35.768228+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+2014-11-30T08:52:35.768229+00:00 app[web.1]:     worker.init_process()
+2014-11-30T08:52:35.768231+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/workers/base.py", line 114, in init_process
+2014-11-30T08:52:35.768233+00:00 app[web.1]:     self.wsgi = self.app.wsgi()
+2014-11-30T08:52:35.768234+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/base.py", line 66, in wsgi
+2014-11-30T08:52:35.768236+00:00 app[web.1]:     self.callable = self.load()
+2014-11-30T08:52:35.768237+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+2014-11-30T08:52:35.768239+00:00 app[web.1]:     return self.load_wsgiapp()
+2014-11-30T08:52:35.768240+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+2014-11-30T08:52:35.768242+00:00 app[web.1]:     return util.import_app(self.app_uri)
+2014-11-30T08:52:35.912544+00:00 app[web.1]: [2014-11-30 08:52:35 +0000] [2] [INFO] Shutting down: Master
+2014-11-30T08:52:35.768244+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/util.py", line 356, in import_app
+2014-11-30T08:52:35.768245+00:00 app[web.1]:     __import__(module)
+2014-11-30T08:52:35.768247+00:00 app[web.1]:   File "/app/hellodjango/wsgi.py", line 16, in <module>
+2014-11-30T08:52:35.768248+00:00 app[web.1]:     application = Cling(get_wsgi_application())
+2014-11-30T08:52:35.768250+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/core/wsgi.py", line 14, in get_wsgi_application
+2014-11-30T08:52:35.768251+00:00 app[web.1]:     django.setup()
+2014-11-30T08:52:35.768252+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/__init__.py", line 20, in setup
+2014-11-30T08:52:35.768254+00:00 app[web.1]:     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+2014-11-30T08:52:35.768255+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/conf/__init__.py", line 46, in __getattr__
+2014-11-30T08:52:35.768257+00:00 app[web.1]:     self._setup(name)
+2014-11-30T08:52:35.768258+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/conf/__init__.py", line 42, in _setup
+2014-11-30T08:52:35.768259+00:00 app[web.1]:     self._wrapped = Settings(settings_module)
+2014-11-30T08:52:35.768260+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/conf/__init__.py", line 94, in __init__
+2014-11-30T08:52:35.768266+00:00 app[web.1]:   File "/app/hellodjango/settings.py", line 65, in <module>
+2014-11-30T08:52:35.768267+00:00 app[web.1]:     DATABASES['default'] =  dj_database_url.config()
+2014-11-30T08:52:35.768262+00:00 app[web.1]:     mod = importlib.import_module(self.SETTINGS_MODULE)
+2014-11-30T08:52:35.768263+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/importlib/__init__.py", line 37, in import_module
+2014-11-30T08:52:35.768265+00:00 app[web.1]:     __import__(name)
+2014-11-30T08:52:35.768270+00:00 app[web.1]: Traceback (most recent call last):
+2014-11-30T08:52:35.768271+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+2014-11-30T08:52:35.768273+00:00 app[web.1]:     worker.init_process()
+2014-11-30T08:52:35.768269+00:00 app[web.1]: NameError: name 'DATABASES' is not defined
+2014-11-30T08:52:35.768296+00:00 app[web.1]:     self.wsgi = self.app.wsgi()
+2014-11-30T08:52:35.768297+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/base.py", line 66, in wsgi
+2014-11-30T08:52:35.768298+00:00 app[web.1]:     self.callable = self.load()
+2014-11-30T08:52:35.768294+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/workers/base.py", line 114, in init_process
+2014-11-30T08:52:35.768300+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+2014-11-30T08:52:35.768301+00:00 app[web.1]:     return self.load_wsgiapp()
+2014-11-30T08:52:35.768302+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+2014-11-30T08:52:35.768303+00:00 app[web.1]:     return util.import_app(self.app_uri)
+2014-11-30T08:52:35.768305+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/util.py", line 356, in import_app
+2014-11-30T08:52:35.768306+00:00 app[web.1]:     __import__(module)
+2014-11-30T08:52:35.768307+00:00 app[web.1]:   File "/app/hellodjango/wsgi.py", line 16, in <module>
+2014-11-30T08:52:35.768309+00:00 app[web.1]:     application = Cling(get_wsgi_application())
+2014-11-30T08:52:35.768310+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/core/wsgi.py", line 14, in get_wsgi_application
+2014-11-30T08:52:35.768314+00:00 app[web.1]:     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+2014-11-30T08:52:35.768316+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/conf/__init__.py", line 46, in __getattr__
+2014-11-30T08:52:35.768317+00:00 app[web.1]:     self._setup(name)
+2014-11-30T08:52:35.768318+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/conf/__init__.py", line 42, in _setup
+2014-11-30T08:52:35.768311+00:00 app[web.1]:     django.setup()
+2014-11-30T08:52:35.768313+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/__init__.py", line 20, in setup
+2014-11-30T08:52:35.768320+00:00 app[web.1]:     self._wrapped = Settings(settings_module)
+2014-11-30T08:52:35.768321+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/conf/__init__.py", line 94, in __init__
+2014-11-30T08:52:35.768322+00:00 app[web.1]:     mod = importlib.import_module(self.SETTINGS_MODULE)
+2014-11-30T08:52:35.768324+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/importlib/__init__.py", line 37, in import_module
+2014-11-30T08:52:35.768326+00:00 app[web.1]:     __import__(name)
+2014-11-30T08:52:35.768327+00:00 app[web.1]:   File "/app/hellodjango/settings.py", line 65, in <module>
+2014-11-30T08:52:35.768328+00:00 app[web.1]:     DATABASES['default'] =  dj_database_url.config()
+2014-11-30T08:52:35.768330+00:00 app[web.1]: NameError: name 'DATABASES' is not defined
+2014-11-30T08:52:35.769384+00:00 app[web.1]: [2014-11-30 08:52:35 +0000] [7] [INFO] Worker exiting (pid: 7)
+2014-11-30T08:52:35.912736+00:00 app[web.1]: [2014-11-30 08:52:35 +0000] [2] [INFO] Reason: Worker failed to boot.
+2014-11-30T08:52:36.767380+00:00 heroku[web.1]: Process exited with status 3
+2014-11-30T08:52:36.783397+00:00 heroku[web.1]: State changed from up to crashed
+2014-11-30T08:52:53.250028+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=pacific-inlet-2042.herokuapp.com request_id=078463b6-d3e5-4a67-8878-92a80cf8648a fwd="89.201.236.237" dyno= connect= service= status=503 bytes=
